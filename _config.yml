@@ -1,3 +1,3 @@
 theme: jekyll-theme-minimal
-title: Project Page for Matthew Lee
-description: A page to show projects
+title: Flutter Inventory List
+description: This project converts an Android inventory application into a Flutter app with a Firebase realtime database as its backend.
