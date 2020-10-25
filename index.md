@@ -7,10 +7,28 @@ This Flutter application is a small portion of the knowledge gained from partici
 
 ## Artifacts
 
+![appThreePanel](https://user-images.githubusercontent.com/19337083/97106140-41379800-1696-11eb-841c-a61eea3f80a3.PNG)
+
 ### Software Design and Engineering
 
-![appThreePanel](https://user-images.githubusercontent.com/19337083/97106140-41379800-1696-11eb-841c-a61eea3f80a3.PNG)
+To illustrate software engineering/design, an Android application was converted to a Flutter application. The original inventory application was written in Java using Android. This app was converted to use the Flutter framework by Google which is written in the Dart language. The original Android Inventory app was created in CS360 last semester from July to August. The current artifact was created over the course of this semester. The completed Flutter app also covers the other artifacts for algorithms and data structures and database.
+
+The artifact showcases my ability to work with different languages and frameworks. Software design concepts are agnostic to languages and tools, but they may be easier to implement in some frameworks. This artifact showcases my ability to use different tools and techniques. Different jobs may require the use of different technologies and being able to quickly pick them up and use them is a valuable skill. Specifically, the structuring of the app with individual widgets, pages, and providers for state management illustrate software design techniques. State management and app structure would be the biggest improvement to the original code.
+
+Building the Flutter version of the Inventory app gave me a stronger appreciation for state management. The framework makes a strong effort to provide tools to easily manage the state of the app. There are built in classes to pass data around to different parts of the application such as the current list of inventory items and their counts. Flutter provides classes like Providers. The Android app essentially has no state management structure with just passing the data through the page constructors as arguments. Learning how to properly manage state and implementing the structure was an interesting challenge.
 
 ### Algorithms and Data Structures
 
+The application was modified with the inclusion of a search function to the Inventory application along with the usage of maps for decoding the JSON responses from the Firestore API. When a user types into the search bar the list of inventory items is filtered for items titled with the included text. The search implementation is relatively simple using a linear search through the locally stored list of items. A full text search of the documents on the back end could be implemented with the use of a third-party application like Elastic Search or Algolia. Considerations were made to whether it would be useful at all to searching small item lists with something beyond basic algorithms.
+
+The artifact is included as it is a popular feature in most applications to have a search function. As the list of inventory Items get larger it is also helpful for a user to quickly sort the list. Simple data structures such as lists and maps are necessary components to most applications and without their use can hamper solutions. When working with the Firebase rest API, maps are used to store the JSON responses from the real time database. This make it easy to parse and load the stored inventory items based on key value pairs rather than parsing the JSON tree manually. Flutters Map class implementation defaults to storing it in a linked hash map. 
+
+The usage of data structures and algorithms in most simple applications do not seem to be complex unless the application gets very large or has uniquely complex functions. When dealing with JSON data having built-ins for Maps and JSON encoding and decoding is very useful to quickly parse the JSON data. The initial challenge was just learning how to use and implement the data structures in the given framework and language and required a great deal of research.
+
 ### Database
+
+The original inventory application uses a mySQL back end stored locally in the application. The new Flutter application uses a cloud based real time database in firebase and communicates with it through REST API calls. This was created over the course of this semester. 
+
+The integration of a cloud based third party back end is important to showcase my abilities to work with cloud infrastructures. The going trend today is to use managed services in the cloud to quickly build and scale applications with lots of data. It is more cost effective for companies and easier to manage for database professionals. The artifact improves upon the older mySQL implementation by being more robust, secure, and saleable. Since the previous back end was local, the app wouldn’t be able to support multiple users except the ones created locally. Firebase also takes care of authentication and secures the database from unwanted connections for the various REST operations. If the usage of the database increases, performance wont bottle neck as resources can quickly be scaled up.
+
+Working with the specific Firebase API posed some initial difficulties as I had to learn how to properly call to the API. The pattern for accessing REST APIs is very standardized and working with mongo DB in other classes helped to work with the Firebase API. There was some trouble in figuring out how to tie inventory items to a specific user in combination with the authentication model that Firebase provides but was solved with researching the documentation and looking at examples.
