@@ -5,4 +5,12 @@ Through out my time at SNHU I have come to learn about a variety of computer sci
 
 This Flutter application is a small portion of the knowledge gained from participating in SNHUs program. The Application showcases what was learned for Software Design and Engineering, Algorithms and Data Structures, and Databases. Porting the existing code base for the Inventory app in Android to a new framework and language, Flutter and dart, highlights various software design techniques such as application state management. The addition of text search and hash maps to parse JSON data from REST API responses show an understanding of data structures and algorithms. The implementation of a cloud based real time database highlights proficiency in using modern database solutions and architectures. These various parts all fit into a cohesive final application that works together to provide an inventory tracking application. 
 
+## Artifacts
+
+### Software Design and Engineering
+
 ![appThreePanel](https://user-images.githubusercontent.com/19337083/97106140-41379800-1696-11eb-841c-a61eea3f80a3.PNG)
+
+### Algorithms and Data Structures
+
+### Database
